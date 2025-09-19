@@ -55,9 +55,10 @@
 - 書籍データの削除
     1. 書籍一覧ページで、削除したい書籍画像の下部にある「削除」ボタンをクリック
 
-<pre><code>## 📁 ディレクトリ構成 
+## 📁 ディレクトリ構成 
 ``` . ├── templates/ # HTMLファイルを管理するフォルダ │ ├── index.html │ └── book.html │ ├── static/ │ └── css/ # CSSファイルを管理するフォルダ │ ├── index.css │ └── book.css │ ├── book_images/ # 書影を管理するフォルダ │ └── default_image.jpg # 書影が見つからない場合に表示する画像 │ ├── routes/ # Flaskルーティング処理 │ ├── add_book.py # 書籍追加処理 │ └── delete_book.py # 書籍削除処理 │ ├── src/ │ └── module/ # モジュールを管理するフォルダ │ ├── db_io.py # データベース関連処理 │ ├── googlebooks.py # Google Books API 関連処理 │ ├── ndlSearch.py # 国立国会図書館サーチ API 関連処理 │ └── calil.py # カーリル API 関連処理 │ ├── app.py # メインの処理スクリプト（Flaskアプリ本体） ├── library.db # 書籍情報を保存するSQLiteデータベース ├── .env # APIキーなどの機密情報を記述（git管理除外） ├── .gitignore # .env や __pycache__ 等を除外 └── README.md # このファイル（プロジェクトの説明）
-``` </code></pre>
+``` 
+
 
 
 
