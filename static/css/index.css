@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+h1{
+    color:#4ea8f9;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); 
+  gap: 1rem;
+}
+
+
+
+
+/*
+.field {
+    display: flex;  
+    justify-content: space-around;
+}
+
+.book-image {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.book-card {
+  border: 1px solid #ccc;
+  padding: .5rem;
+}
+.book-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+    */
+

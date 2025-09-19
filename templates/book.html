@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>詳細_書籍情報|{{book.title}}</title>
+        <!--<link rel="stylesheet" href="book.css">-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/book.css') }}">
+    </head>
+
+    <body>
+        <div class="appframe">
+            <div class="appframe_left">
+                <button type="button" name="move_index" onclick="location.href='http://127.0.0.1:5000'">書籍一覧へ戻る</button>
+                <h1>{{ book.title }}</h1>
+                <img src="{{ img_src }}" alt="{{ book['title'] }} の書影" style="max-height:300px">
+            </div>
+
+            <div class="appframe_right">
+
+                <ul>
+                    <li><strong>ISBN:</strong> {{ book.isbn }}</li>
+                    <li><strong>NDC:</strong> {{ book.ndc }}</li>
+                    <li><strong>概要:</strong>{{ book.description }}</li>  
+                <ul>    
+                
+                <h3>蔵書情報</h3>
+                {% if holdings and holdings|length > 0 %}
+                    <table border="1" style="margin:auto;">
+                        <thead>
+                        <tr bgcolor="#b1daff";">
+                            <th>システムID</th>
+                            <th>図書館名</th>
+                            <th>状態</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for h in holdings %}
+                            <tr>
+                                <td>{{h.system_id}}</td>
+                                <td>{{ h.library_name }}</td>
+                                <td>{{ h.status }}</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                    {% else %}
+                    <p>この書籍の蔵書情報は登録されていません。</p>
+                    {% endif %}
+            </div>
+        </div>   
+    </body>
+</html>
