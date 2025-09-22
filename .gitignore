@@ -21,6 +21,8 @@ rad.json
 #Test results file
 TestResults.xml
 
+#無視したいディレクトリ
+.env
 test.txt
 b.txt
 aaaaaaaaaaaa.txt
